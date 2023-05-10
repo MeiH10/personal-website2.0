@@ -34,6 +34,10 @@
     color: white;
     background-color: transparent;
   }
+
+  .deactivate-btn:hover {
+    color: #00ED64;
+  }
   
   #content {
     height: 675px;

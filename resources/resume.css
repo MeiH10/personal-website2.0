@@ -16,6 +16,11 @@
     overflow-y: hidden;
     height: 100vh;
   }
+
+  .contact-body{
+    overflow-x: hidden;
+    height: 100vh;
+  }
   
   #nav_bar {
     height: 70px;
@@ -40,6 +45,11 @@
     color: white;
     background-color: transparent;
   }
+
+  .deactivate-btn:hover {
+    color: #00ED64;
+  }
+  
   
   #content {
     height: 675px;
@@ -71,6 +81,10 @@
     width: 200px;
     border: 3px solid #00ED64;
     border-radius: 50%;
+  }
+
+  #profile-contact {
+    border: 3px solid #00ED64;
   }
   
   .circle-container {
@@ -245,7 +259,7 @@
   
 
 .project-card {
-    width: 69%;
+    width: 1000px;
 }
 .project-card img {
     width: 87%;
@@ -254,7 +268,7 @@
     
 }
 
-.project-card > h3{
+.project-card > a{
     color: #00ED64;
     font-weight: 1000;
     font-size: 42px;
@@ -266,3 +280,90 @@
     padding-right: 60px;
 
 }
+
+
+
+.color-gray {
+    background-color: #20303C;
+}
+
+.form-control {
+    background-color: #00ED6470;
+    color: #000000;
+  }
+
+  button {
+    background-color: #00ED6470 !important;
+
+  }
+
+  
+#message {
+    height: 17%;
+}
+
+.form-title {
+    color: #00ED64;
+  }
+
+  
+  @media (max-width: 767.98px) {
+    #resume h1, #resume h2, #resume h3, #resume h4, #resume h5, #resume h6, #resume p, #resume li {
+        font-size: calc(1rem - 2px);
+    }
+  }
+
+
+
+
+@media (max-width: 767.9px) {
+    .vertical-menu {
+        display: flex;
+    }
+
+    .vertical-menu a {
+        margin: 0;
+        padding-right: 4px;
+        padding-left: 4px;
+        border-right: #000000 0.5px solid;
+        font-size: 15px;
+    }
+
+    .card-btn{
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 550.9px) {
+    .vertical-menu {
+        display: flex;
+    }
+
+    .vertical-menu a {
+        margin: 0;
+        padding-right: 2px;
+        padding-left: 2px;
+        border-right: #000000 0.5px solid;
+        font-size: 10px;
+    }
+
+    .card-btn{
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width: 991.98px) {
+    .project-card .project-text {
+        margin-top: 20px;
+        padding: 1rem !important;
+        line-height: 28px;
+    }
+}
+
+@media (min-width: 575.9px) {
+    .contact-body {
+        overflow-y: hidden;
+    }
+  }
