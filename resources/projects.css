@@ -258,3 +258,16 @@
     padding-right: 60px;
 
 }
+
+
+#special {
+  overflow-x: hidden;
+}
+
+@media (min-width: 992px) {
+  #special {
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+  }
+}

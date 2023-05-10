@@ -8,6 +8,8 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 #nav_bar {
@@ -44,6 +46,7 @@ body {
   z-index: 1;
 }
 
+
 .left {
   align-items: center;
   justify-content: center;
@@ -67,15 +70,6 @@ h3 {
   border: 2px solid #00ED64;
 }
 
-.circle-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 0;
-  overflow: hidden;
-}
 
 .circle {
   position: absolute;
@@ -84,7 +78,9 @@ h3 {
   width: 500px;
   border: 1px solid #00ED64;
   z-index: -1;
+  box-sizing: border-box;
 }
+
 
 #circle1 {
   top: 90%;
@@ -115,3 +111,14 @@ h3 {
   color: white !important;
 }
 
+#special {
+  overflow-x: hidden;
+}
+
+@media (min-width: 992px) {
+  #special {
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+  }
+}
