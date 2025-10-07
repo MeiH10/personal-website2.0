@@ -8,6 +8,45 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link rel="stylesheet" href="./resources/resume.css" />
     <script defer src="./resources/script.js"></script>
+    <style>
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #00ED64;
+            border-radius: 50%;
+            padding: 20px;
+        }
+        .carousel-indicators li {
+            background-color: #00ED64;
+        }
+        .project-card {
+            width: 90%;
+            max-width: 1000px;
+        }
+        .project-card img {
+            width: 60%;
+            max-width: 500px;
+            height: auto;
+        }
+        /* Remove slide transition */
+        .carousel-item {
+            transition: none !important;
+        }
+        .carousel-item.active,
+        .carousel-item-next,
+        .carousel-item-prev {
+            transform: none !important;
+        }
+        /* Fix overflow issues */
+        body.project-body {
+            overflow-y: auto !important;
+            height: auto !important;
+        }
+        #special {
+            overflow-y: visible !important;
+            overflow-x: hidden;
+            min-height: calc(100vh - 70px);
+        }
+    </style>
 </head>
 
 <body class="project-body">
@@ -38,43 +77,70 @@
     </nav>
 
     <div id="special">
+        <div class="container-fluid justify-content-center align-items-center d-flex py-5">
 
-    <div class="container-fluid justify-content-center align-items-center d-flex">
-
-        <div class="card project-card bg-transparent pt-3">
-            <a href="https://solarroulette.tech/" class="card-title text-center h3">Solar Roulette</a>
-            <div class="text-center">
-                <a href="https://solarroulette.tech/"><img class="card-img-top mx-auto d-block" src="./resources/sr.png" alt="Card image cap"></a>
-            </div>
-            <div class="card-body text-white project-text">
-                <div class="loc-dat d-flex justify-content-between">
-                    <h2 class="card-title m-0 p-0 h5">Solar Roulette-HackRPI Hackathon, Troy, NY</h2>
-                    <p>11.22</p>
+            <div id="projectCarousel" class="carousel slide project-card bg-transparent pt-3" data-ride="carousel" data-interval="false">
+                <ol class="carousel-indicators">
+                    <li data-target="#projectCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#projectCarousel" data-slide-to="1"></li>
+                </ol>
+                
+                <div class="carousel-inner">
+                    <!-- RPI EventHub Project -->
+                    <div class="carousel-item active">
+                        <a href="#" class="card-title text-center h3 d-block mb-3">RPI EventHub</a>
+                        <div class="text-center mb-3">
+                            <img class="mx-auto d-block" src="./resources/eventhub.png" alt="RPI EventHub">
+                        </div>
+                        <div class="text-white project-text pb-5">
+                            <div class="loc-dat d-flex justify-content-between">
+                                <h2 class="card-title m-0 p-0 h5">Rensselaer Center for Open Source, Troy, NY</h2>
+                                <p>Jan. 2024 – Present</p>
+                            </div>
+                            <ul class="pl-3 mt-2">
+                                <li>Led a team of 20+ developers to build RPI EventHub, a platform that increased campus event visibility by 40% and boosted participation by 30% among student organizations and clubs</li>
+                                <li>Collaborated with the Office of the President to expand the platform's reach across student organizations and departments, gaining support from key stakeholders</li>
+                                <li>Designed RESTful APIs and implemented authentication using JWT and OAuth 2.0 with MongoDB, React, and Node.js, ensuring secure, scalable deployment with CI/CD pipelines using Docker and Railway</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Solar Roulette Project -->
+                    <div class="carousel-item">
+                        <a href="https://solarroulette.tech/" class="card-title text-center h3 d-block mb-3">Solar Roulette</a>
+                        <div class="text-center mb-3">
+                            <a href="https://solarroulette.tech/"><img class="mx-auto d-block" src="./resources/sr.png" alt="Solar Roulette"></a>
+                        </div>
+                        <div class="text-white project-text pb-5">
+                            <div class="loc-dat d-flex justify-content-between">
+                                <h2 class="card-title m-0 p-0 h5">Solar Roulette-HackRPI Hackathon, Troy, NY</h2>
+                                <p>11.22</p>
+                            </div>
+                            <ul class="pl-3 mt-2">
+                                <li>Worked in a team of 4 to develop an interactive educational site that displays real-time data on various bodies in the solar system using Solar System OpenData API, Bootstrap, Three.js, and Selenium</li>
+                                <li>Presented the final product to other participants and received overwhelmingly positive feedback</li>
+                                <li>Conducted user testing and received 2nd place prize for best overall project</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <ul class="pl-3">
-                    <li>Worked in a team of 4 to develop an interactive educational site that displays real-time data on various bodies in the 
-                        solar system using Solar System OpenData API, Bootstrap, Three.js, and Selenium</li>
-                    <li>Presented the final product to other participants and received overwhelmingly positive feedback
-                    </li>
-                    <li>Conducted user testing and received 2nd place prize for best overall project</li>
-                </ul>
+                
+                <a class="carousel-control-prev" href="#projectCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#projectCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-          </div>
-          <div class="circle" id="circle1"></div>
-          <div class="circle" id="circle2-center"></div>
-          <div class="circle" id="circle3"></div>
-      
-          
 
+            <div class="circle" id="circle1"></div>
+            <div class="circle" id="circle2-center"></div>
+            <div class="circle" id="circle3"></div>
 
-
+        </div>
     </div>
-    </div>
-
-
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

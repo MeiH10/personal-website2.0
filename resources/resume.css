@@ -192,10 +192,6 @@
     border: 0;
 }
 
-
-
-/* ... Existing styles ... */
-
 .circle.hollow-circle {
     position: absolute;
     border: 2px solid #00ED64;
@@ -208,7 +204,7 @@
 
 #edu_cir{
 
-    top: 13%;
+    top: 14%;
 }
 
 #exp_cir{
@@ -216,23 +212,18 @@
 }
 
 #pro_cir{
-    top: 67%;
+    top: 76%;
 }
 
 #skill_cir{
-    top: 78%;
+    top: 89%;
 }
-
-#act_cir{
-    top: 84%;
-}
-/* ... Existing styles ... */
 
 .line-through {
     position: absolute;
     left: 50%;
     top: 0;
-    height: 85%;
+    height: 100%;
     width: 2px;
     background-color: #00ED64;
     z-index: -1;
